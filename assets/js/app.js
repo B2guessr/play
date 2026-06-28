@@ -1014,7 +1014,7 @@ function finishRound(guessXNorm, guessYNorm) {
     const dx = (guessXNorm - targetX) * SOURCE_WIDTH;
     const dy = (guessYNorm - targetY) * SOURCE_HEIGHT;
     distancePixels = Math.hypot(dx, dy);
-    const maxDistance = Math.hypot(SOURCE_WIDTH, SOURCE_HEIGHT) * 0.34;
+    const maxDistance = Math.hypot(SOURCE_WIDTH, SOURCE_HEIGHT) * 0.42;
     const accuracy = clamp(1 - distancePixels / maxDistance, 0, 1);
     roundScore = Math.round(accuracy * 100);
     state.totalScore += roundScore;
