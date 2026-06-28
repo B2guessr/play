@@ -1016,7 +1016,7 @@ function finishRound(guessXNorm, guessYNorm) {
     distancePixels = Math.hypot(dx, dy);
     const maxDistance = Math.hypot(SOURCE_WIDTH, SOURCE_HEIGHT) * 0.42;
     const accuracy = clamp(1 - distancePixels / maxDistance, 0, 1);
-    roundScore = Math.round(accuracy * 100);
+    roundScore = Math.round(accuracy * 100 + 0.5);
     state.totalScore += roundScore;
     modalHtml = `
       <p><strong>Correct map:</strong> ${answerMap.name}</p>
